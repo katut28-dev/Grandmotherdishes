@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-Hant-HK">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>今晚食乜餸好？</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <img src="assets/family-dinner-hero.png" alt="家常晚飯餐桌" />
+        <div class="hero-copy">
+          <p class="eyebrow">婆婆今晚菜單抽籤</p>
+          <h1 id="page-title">今晚食乜餸好？</h1>
+          <p>一按就配好四款家常餸：肥孫子一款、帥兒子一款，再加兩款穩陣家常菜。</p>
+        </div>
+      </section>
+
+      <section class="today-panel" aria-labelledby="today-title">
+        <div class="panel-header">
+          <div>
+            <p class="date-label" id="today-date">今日</p>
+            <h2 id="today-title">今晚菜單</h2>
+          </div>
+          <button class="primary-button" id="draw-button" type="button">抽今晚餸</button>
+        </div>
+
+        <div class="dish-grid" id="dish-grid" aria-live="polite"></div>
+
+        <div class="button-row">
+          <button class="secondary-button" id="redraw-button" type="button">重抽今日菜單</button>
+          <button class="ghost-button" id="refresh-button" type="button">重新載入紀錄</button>
+        </div>
+      </section>
+
+      <section class="history-panel" aria-labelledby="history-title">
+        <div class="panel-header compact">
+          <div>
+            <p class="date-label">Database</p>
+            <h2 id="history-title">最近十天菜單</h2>
+          </div>
+        </div>
+        <div class="history-list" id="history-list"></div>
+      </section>
+    </main>
+
+    <template id="dish-card-template">
+      <article class="dish-card">
+        <span class="dish-tag"></span>
+        <h3></h3>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
